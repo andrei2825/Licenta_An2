@@ -1,0 +1,8 @@
+Nume: Porumb Andrei Cornel
+Grupa: 322CDa
+
+Am realizat inceputul laboratorului conform explicatiilor date. La taskul 4(de pe ocw) 
+am luat cheia din cookie-ul returnat la punctul anterior si am folosit aceasta cheie
+la exercitiul bonus 2, insa am intampinat o problema. Chiar daca imi folosesc cheia mea
+(cea a contului meu de OpenWeather) tot primesc unauthorized. Am incercat si din 
+browser si am patit acelasi lucru.

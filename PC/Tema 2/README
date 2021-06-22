@@ -1,0 +1,51 @@
+Nume: Porumb Andrei-Cornel
+Grupa: 322CD
+
+Tema 2 PC
+Am folosit ca baza pentru aceasta tema, laboratorul 8, acesta fiid cel mai 
+complet dintre cele 3.
+
+In helpers.h am creat structurile de care am avut nevoie in realizarea temei.
+
+In server.c, am inceput rezolvarea temei prin a creea cate un socket pentru
+clientii TCP si pentru cei UDP.  
+Folosind select, am putut separa mesajele de la STDIN de cele de la clienti.
+Daca primeam un mesaj de exit la STDIN, atunci parcurgeam lista de clienti 
+conectati si le dadram kick, ii inchideam, apoi inchideam si serverul.
+In caz contrar, daca datele nu vin de la STDIN, atunci acestea vin de la 
+unul dintre clientii conectati, astfel am verificat daca datele primite
+sunt de la un client TCP sau un client UDP.
+Daca datele sunt de la un client TCP , atunci inseamna ca un client TCP 
+incearca sa se conecteze. II accept cererea si aloc memorie pentru acest
+client.
+Daca datele sunt de la un client UDP, atunci acesta a trimis un mesaj pe care 
+il impart in bucatipe care le adaug intr-o variabila de tip UDP_message.
+Deoraece mesajul efectiv a clientului UDP poate varia in functie de campul
+data_type,(byet-ul 50), am creeat un switch in care, in functie de tipul de
+date, adaug mesajul in variabile corespunzatoare.
+Dupa ce formatez mesajul UDP, parcurg toti clientii conectati, cautand
+clientii ce sunt abonati la topicul mesajului curent si il timit catre acestia.
+Daca acestia sunt conectati, trimit mesajul direct, insa daca acestia sunt 
+offline, verific daca pentru topicul curent au setat SF pe 1, stocand
+mesajul untr-un array pe care il voi trimite cand clientul se va reconecta.
+Daca datele nu sunt o cerere de conectare de la un cliuent TCP sau un mesaj
+de la un client UDP, atunci datele primite reprezinta un mesajj de la un 
+client TCP.
+Daca acest mesaj este o cerere de subscribe, adaug topicul din cerere in 
+lista de subscribtii ale clientului.
+Daca acest mesaj este o cerere de unsubscribe, scot topicul din lista de
+subscribtii a clientului.
+Daca nu este o cerere, atunci datele sunt un mesaj cu ID-ul clientului
+care s-a conectat. Aici verific daca id-ul clientului care incearca sa se 
+conecteze ester deja folosit sau nu, iar daca nu este afisez mesajul cerut.
+In finalul codului, eliberez memoria si inchid socketii.
+
+In subscriber.c am implementat codul pentru client.
+Conectez clientul la server si trimitserverului id-ul clientului.
+La fel ca in server, am folosit select. Daca primesc mesaje de la STDIN, 
+acestea pot fi cerere de exit, request de subscribe sau de unsubscribe,
+pe care (ultimele 2) le-am trimis serverului.
+Daca mesajule ste primit de la server, acesta poate fi
+ori exit, caz in care inchid clientul, ori un mesaj de tip
+UDP_message pe care, un functie de campul data_type, 
+il afisez corespunzator.

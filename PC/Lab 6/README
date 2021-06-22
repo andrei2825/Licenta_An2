@@ -1,0 +1,14 @@
+Nume: Porumb Andrei-Cornel
+Grupa: 322CDa
+In server:
+Am deschis un socket cu domeniul AF_INET si type SOCK_DGRAM si am 
+verificat daca socketul este liber. In adresa socketului ca si port am 
+folosti al doilea argument primit din linia de comanda. Pentru scriere, am 
+apelat recvfrom si am retinut continutul pachetelor primite intr-un 
+buffer pe care l-am printat intr-un fisier. In clipa in care bufferul este 
+gol, opresc loop-ul.
+In client: 
+Asemanator cu server, doar ca aici portul este al treilea argument, iar in 
+loc de apelare a functiei recvfrom, apelez functia sendto pentru a trimite 
+mesajele prin socketul dechis. Loop-ul va rula pana cand mesajul trimis va 
+fi null.

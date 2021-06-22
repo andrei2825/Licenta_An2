@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CN/Lab 5/Lab 5.srcs/sources_1/new/adunare.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adunare
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CN/Lab 5/Lab 5.srcs/sources_1/new/ffd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ffd
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CN/Lab 5/Lab 5.srcs/sources_1/new/inmultire.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module inmultire
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CN/Lab 5/Lab 5.srcs/sources_1/new/scadere.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module scadere
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CN/Lab 5/Lab 5.srcs/sources_1/new/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/CN/Lab 5/Lab 5.srcs/sim_1/new/sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim

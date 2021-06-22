@@ -1,0 +1,20 @@
+Nume: Porumb Andrei Cornel
+Grupa: 322CDa
+
+Pentru rezolvarea primului exercitiu (cel cu doar 2 clienti) am
+retinut socketul fiecarui client si daca mesajul venea de la unul din ei, 
+il trimiteam celuilalt.
+
+Pentru a rezolva exercitiul 2, am luat instructiunea de select
+iar in lista de read am adaugat sockfd si STDIN_FILENO pentru
+a verifica daca clientul primeste date de la server sau de la 
+tastatura.
+
+Pentru exercitiul 3, in loc sa retin socketul fiecarui client, 
+trimiteam datele clientului a carui socket era specificat la inceputul
+bufferului folosind atoi.
+
+Pentru exercitiul 4, in momentul in care un nou client se leaga la server, 
+parcurg lista de clienti existenti si le trimit un mesaj ce contine socketul
+noului client si apoi ii trimit acestuia lista de clienti conectati, incluzand-ul 
+si pe el.

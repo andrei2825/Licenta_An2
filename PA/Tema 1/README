@@ -1,0 +1,63 @@
+Nume : Porumb Andrei Cornel
+Grupa: 322CD
+Problema 1: 
+Pentru implementasrea problemei 1, am ales sa parcurg lista de elemente iar si
+iar pana cand suma calculata este > bugetul dat.
+Pentru a face asta am creat un while care merge cat timp suma < buget,
+in care am parcurs cu un for lista si de cate ori gaseam un element care era
+egal cu minimul din lista, in incrementam, updatam suma si dupa parcurgere
+incrementam si minimul.
+
+Problema 2:
+Pentru aceasta problema am ales sa implementez o rezolvare a rucsacului 0-1.
+Ca si caz de baza m-am inspirat din modelul de pe 
+https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/.
+Pentru a putea rezolva problema noastra, am modificat functia solve astefel
+incat sa primeasca inca un paramentru avand bugetul, greutatea maxima si 
+pierderile maxime. Am modificat si 2d array-ul din problema originala intr-un
+3d array pentru a putea retine si valorile in functie de pierderi.
+
+Astfel daca toate elementele sunt 0, valoarea de pe acea pozitie este 0,
+altfel daca costul este inca sub buget si pierderile sub limita maxima,
+vom adauga maximul dintre costul curent + valoarea precedenta sau 
+doar valoarea precedenta.
+
+Daca costul sau pierderile au ajuns la limita maxima, valoarea curenta va fi
+egala cu cea precedenta.
+
+Problema 3:
+Initial cand citesc numerele primite, calculez in acelasi timp si minimul dar 
+verific si daca toate elementele sunt egale ca sa reduc cazul asta
+(nu stiu daca e un test cu asta dar am zis sa fiu sigur).
+Verific pe ce pozitie se afla minimul. Daca este pe prima pozitie, 
+transform urmatorul element tot in minim si adaug mutarile necesare la rezultat, 
+iar apoi (si asta cred ca e partea care a luat mai mult sa imi dau seama) 
+parcurg vectorul cu inaltimi de la sfarsit la inceput si fac comparatii intre 
+elemente consecutive, adica daca h(i) < h(i-1) atunci h(i-1) devine h(i) 
+si adaug la rezultat numarul de mutari necesare.
+La fel fac si daca minimul este la final, aici luand parcurgerea de la 0
+pana la N-2.
+Acum, daca minim nu este nici primul, nici ultimul, parcurg vectorul si 
+aflu exact indexul la care se afla(nu conteaza daca se repeta, 
+eu iau doar primul index si dau break).
+Dupa ce gasesc indexul, am practic 2 for-uri unul care pleaca de la 0 
+pana la index, si unul de la N-1 pana la i dex si faci aceleasi 
+verificari si calcule ca mai sus
+
+Problema 4:
+Am realizat implementarea acestei probleme utilizand algoritmul de pe:
+https://www.geeksforgeeks.org/minimize-the-cost-to-make-all-the-adjacent-elements-distinct-in-an-array/.
+Este un algoritm de programare dinamica care pleaca de la o matrice
+de Nx3 elemente, coloanele avand rolul de a retine valorile in cele 
+3 diferite stari: valoare - nrColoana.
+Cazul de baza consta in elementul de pe prima linie, x, x-1 si x-2
+Parcurg matricea si pentru fiecare element compar inaltimea curenta 
+- nr coloanei cu inaltimea precedenta de la coloana actuala.
+Cand aceste 2 valori nu sutn egale, calculez minimul si valoarea
+de la pozitia curenta inmultind coloana (nr de scaderi) cu costul
+elementului curent si adunand minimul. Daca in niciunul din cazurile de 
+mai sus nu este o egalitate, minimul va fi max_long astfel va fi ignorat la 
+alegerea rezultatului final.
+Daca inaltimea curenta este > 0 atunci putem efectua operatiile,
+altfel elementul curent devine max_long.
+Dupa parcurgere, calculez suma cu cele mai mici valori posibile.

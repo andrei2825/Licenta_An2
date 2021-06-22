@@ -1,0 +1,10 @@
+0.7
+2020.2
+Nov 18 2020
+09:47:47
+D:/CN/lab2/lab2.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,,,,,,,
+D:/CN/lab2/lab2.srcs/sim_1/new/numaratorSim.v,1617082895,verilog,,,,numaratorSim,,,,,,,,
+D:/CN/lab2/lab2.srcs/sim_1/new/stopwatchSim.v,1617088790,verilog,,,,stopwatchSim,,,,,,,,
+D:/CN/lab2/lab2.srcs/sources_1/new/bin2bcd.v,1617088803,verilog,,D:/CN/lab2/lab2.srcs/sources_1/new/numarator.v,,bin2bcd,,,,,,,,
+D:/CN/lab2/lab2.srcs/sources_1/new/numarator.v,1617088789,verilog,,D:/CN/lab2/lab2.srcs/sources_1/new/stopwatch.v,,numarator,,,,,,,,
+D:/CN/lab2/lab2.srcs/sources_1/new/stopwatch.v,1617089186,verilog,,D:/CN/lab2/lab2.srcs/sim_1/new/stopwatchSim.v,,stopwatch,,,,,,,,

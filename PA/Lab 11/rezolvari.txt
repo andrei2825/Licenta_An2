@@ -1,0 +1,319 @@
+Nume: Porumb Andrei-Cornel
+Grupa: 322CDa
+
+Ex1:
+
+I A - 3
+I J - 5
+I L - 8
+A B - 9
+A G - 10
+A H - 6
+B C - 5
+B G - 11
+C D - 8
+C E - 12
+D F - 9
+E F - 2
+G H - 4
+J K - 14
+K L - 7
+
+AMA = NULL
+d[A] = d[B] = d[C] = d[D] = d[E] = d[F] = d[G] = d[H] = d[I] = d[J] = d[K] = d[L] = INF;
+p[A] = p[B] = p[C] = p[D] = p[E] = p[F] = p[G] = p[H] = p[I] = p[J] = p[K] = p[L] = null;
+
+
+s = I 
+d[I] = 0
+
+AMA = {(I, NULL)}
+d[A] = 3
+d[J] = 5
+d[L] = 8
+
+Q = A(3), J(5), L(8), B(inf), C(inf), D(inf), E(inf), F(inf), G(inf), H(inf), K(inf)
+u = A
+Q = J(5), L(8), B(inf), C(inf), D(inf), E(inf), F(inf), G(inf), H(inf), K(inf)
+
+AMA = {(I, NULL), (A, I)}
+
+d[B] > w(A, B) => d[B] = w(A, B) = 9
+p[B] = A .
+d[G] > w(A, G) => d[G] = w(A, G) = 10
+p[G] = A .
+d[H] > w(A, H) => d[H] = w(A, H) = 6
+p[H] = A .
+
+Q = J(5), L(8), B(9), C(inf), D(inf), E(inf), F(inf), G(10), H(6), K(inf)
+u = J
+Q = L(8), B(8), C(inf), D(inf), E(inf), F(inf), G(10), H(6), K(inf)
+
+AMA = {(I, NULL), (A, I), (J, I)}
+
+d[K] > w(J, K) => d[K] = w(J, K) = 14
+p[K] = J.
+
+Q = L(8), B(9), C(inf), D(inf), E(inf), F(inf), G(10), H(6), K(14)
+u = H
+Q = L(8), B(9), C(inf), D(inf), E(inf), F(inf), G(10), K(14)
+
+AMA = {(I, NULL), (A, I), (J, I), (H, A)}
+
+d[G] > w(H, G) => d[G] = w[H, G] = 4
+p[G] = H.
+
+
+Q = L(8), B(9), C(inf), D(inf), E(inf), F(inf), G(4), K(14)
+u = G 
+Q = L(8), B(9), C(inf), D(inf), E(inf), F(inf), K(14)
+
+AMA = {(I, NULL), (A, I), (J, I), (H, A), (G, H)}
+
+d[B] < w(G, B)
+
+Q = L(8), B(9), C(inf), D(inf), E(inf), F(inf), K(14)
+u = L
+Q = B(9), C(inf), D(inf), E(inf), F(inf), K(14)
+
+AMA = {(I, NULL), (A, I), (J, I), (H, A), (G, H), (L, I)}
+
+d[K] > w(L, K) => d[K] = 7
+p[K] = L.
+
+Q = B(9), C(inf), D(inf), E(inf), F(inf), K(7)
+u = K
+Q = B(9), C(inf), D(inf), E(inf), F(inf)
+
+AMA = {(I, NULL), (A, I), (J, I), (H, A), (G, H), (L, I), (K, L)}
+
+
+Q = B(8), C(inf), D(inf), E(inf), F(inf)
+u = B
+Q = C(inf), D(inf), E(inf), F(inf)
+
+AMA = {(I, NULL), (A, I), (J, I), (H, A), (G, H), (L, I), (K, L), (B, A)}
+
+d[C] > w(B, C) => d[C] = 5
+p[C] = B.
+
+Q = C(5), D(inf), E(inf), F(inf)
+u = C
+Q = D(inf), E(inf), F(inf)
+
+AMA = {(I, NULL), (A, I), (J, I), (H, A), (G, H), (L, I), (K, L), (B, A), (C, B)}
+
+d[D] > w(C, D) => d[D] = 8.
+p[D] = C 
+d[E] > w(C, E) => d[E] = 12
+p[E] = C 
+
+Q = D(8), E(12), F(inf)
+u = D 
+Q = E(12), F(inf)
+
+AMA = {(I, NULL), (A, I), (J, I), (H, A), (G, H), (L, I), (K, L), (B, A), (C, B), (D, C)}
+
+d[F] > w(D, F) => d[F] = 9
+p[F] = D 
+
+Q = E(12), F(9)
+u = F
+Q = E(12)
+
+AMA = {(I, NULL), (A, I), (J, I), (H, A), (G, H), (L, I), (K, L), (B, A), (C, B), (D, C), (F, D)}
+
+d[E] > w(F, E) => d[E] = 2
+p[E] = F
+
+Q = E(2)
+u = E
+Q = empty
+
+AMA = {(I, NULL), (A, I), (J, I), (H, A), (G, H), (L, I), (K, L), (B, A), (C, B), (D, C), (F, D), (E, F)}
+
+
+
+rez:
+d[A] = 3
+d[B] = 9
+d[C] = 5
+d[D] = 8
+d[E] = 2
+d[F] = 9
+d[G] = 4
+d[H] = 6
+d[I] = 0
+d[J] = 5
+d[K] = 7
+d[L] = 8
+
+p[A] = I
+p[B] = A
+p[C] = B
+p[D] = C
+p[E] = F
+p[F] = D
+p[G] = H
+p[H] = A
+p[I] = NULL
+p[J] = I
+p[K] = L
+p[L] = I
+
+AMA = {(I, NULL), (A, I), (J, I), (H, A), (G, H), (L, I), (K, L), (B, A), (C, B), (D, C), (F, D), (E, F)}
+
+
+
+
+
+2. Kruskal
+
+Graf sortat:
+
+EF - 2
+AI - 3
+GH - 4
+BC - 5
+IJ - 5
+AH - 6
+KL - 7
+CD - 8
+IL - 8
+AB - 9
+DF - 9
+AG - 10
+BG - 11
+CE - 12
+JK - 14
+
+Pt fiecare (u, v) din E
+
+(E, F): Arb(E) != Arb(F)
+			Arb(E) = Arb(E) U Arb(F) = EF
+			Arb(F) = EF
+			A = { (E, F) } 
+(A, I): Arb(A) != Arb(I)
+			Arb(A) = Arb(A) U Arb(I) = AI
+			Arb(I) = AI 
+			A = { (E, F), (A, I) }
+(G, H): Arb(G) != Arb(H)
+			Arb(G) = Arb(G) U Arb(H) = GH
+			Arb(H) = GH 
+			A = { (E, F), (A, I), (G, H) }	
+(B, C): Arb(B) != Arb(C)
+			Arb(B) = Arb(B) U Arb(C) = BC
+			Arb(C) = BC
+			A = { (E, F), (A, I), (G, H), (B, C) }
+(I, J): Arb(I) != Arb(J)
+			Arb(I) = Arb(I) U Arb(J) = JI + A = JIA
+			Arb(A) = JIA
+			Arb(J) = JIA 
+			A = { (E, F), (A, I), (G, H), (B, C), (I, J) }	
+(A, H):	Arb(A) != Arb(H)
+			Arb(A) = Arb(A) U Arb(H) = JIA + HG = JIAHG
+			Arb(J) = JIAHG
+			Arb(I) = JIAHG
+			Arb(H) = JIAHG
+			Arb(G) = JIAHG 
+			A = { (E, F), (A, I), (G, H), (B, C), (I, J) , (A, H) }	
+(K, L):	Arb(K) != Arb(L)
+			Arb(K) = Arb(K) U Arb(L) = KL
+			Arb(L) = KL
+			A = { (E, F), (A, I), (G, H), (B, C), (I, J), (A, H), (K, L) }	
+(C, D):	Arb(C) != Arb(D)
+			Arb(C) = Arb(C) U Arb(D) = BC + D = BCD 
+			Arb(B) = BCD
+			Arb(D) = BCD
+			A = { (E, F), (A, I), (G, H), (B, C), (I, J), (A, H), (K, L), (C, D) }	
+(I, L):	Arb(I) != Arb(L)
+			Arb(I) = Arb(I) U Arb(L) = JIAHG + KL = JIAHGKL
+			Arb(L) = JIAHGKL
+			Arb(J) = JIAHGKL
+			Arb(A) = JIAHGKL
+			Arb(H) = JIAHGKL
+			Arb(G) = JIAHGKL
+			Arb(K) = JIAHGKL
+			A = { (E, F), (A, I), (G, H), (B, C), (I, J), (A, H), (K, L), (C, D), (I, L) }
+(A, B): Arb(I) != Arb(L)
+			Arb(A) = Arb(A) U Arb(B) = JIAHGKL + BCD = JIAHGKLBCD
+			Arb(J) = JIAHGKLBCD
+			Arb(I) = JIAHGKLBCD
+			Arb(H) = JIAHGKLBCD
+			Arb(G) = JIAHGKLBCD
+			Arb(K) = JIAHGKLBCD
+			Arb(L) = JIAHGKLBCD
+			Arb(B) = JIAHGKLBCD
+			Arb(C) = JIAHGKLBCD
+			Arb(D) = JIAHGKLBCD
+			A = { (E, F), (A, I), (G, H), (B, C), (I, J), (A, H), (K, L), (C, D), (I, L), (A, B) }
+(D, F): Arb(D) != Arb(F)
+			Arb(D) = Arb(D) U Arb(F) = JIAHGKLBCD + EF = JIAHGKLBCDEF 
+			Arb(J) = JIAHGKLBCDEF
+			Arb(I) = JIAHGKLBCDEF
+			Arb(A) = JIAHGKLBCDEF
+			Arb(H) = JIAHGKLBCDEF
+			Arb(G) = JIAHGKLBCDEF
+			Arb(K) = JIAHGKLBCDEF
+			Arb(L) = JIAHGKLBCDEF
+			Arb(B) = JIAHGKLBCDEF
+			Arb(C) = JIAHGKLBCDEF
+			Arb(E) = JIAHGKLBCDEF
+			Arb(F) = JIAHGKLBCDEF
+			A = { (E, F), (A, I), (G, H), (B, C), (I, J), (A, H), (K, L), (C, D), (I, L), (A, B), (D, F) }	
+(A, G): Arb(A) != Arb(G) => fals (ciclu)
+(B, G): Arb(B) != Arb(G) => fals (ciclu)	
+(C, E): Arb(C) != Arb(E) => fals (ciclu)
+(J, K): Arb(J) != Arb(K) => fals (ciclu)
+
+Muchiile lui A: 
+(E, F)
+(A, I)
+(G, H)
+(B, C)
+(I, J)
+(A, H)
+(K, L)
+(C, D)
+(I, L)
+(A, B)
+(D, F) 
+
+cost: 2 + 3 + 4 + 5 + 5 + 6 + 7 + 8 + 8 + 9 + 9 = 66
+
+
+I A - 3
+I J - 5
+I L - 8
+A B - 9
+A G - 10
+A H - 6
+B C - 5
+B G - 11
+C D - 8
+C E - 12
+D F - 9
+E F - 2
+G H - 4
+J K - 14
+K L - 7
+
+
+A - 0
+B - 1
+C - 2
+D - 3
+E - 4
+F - 5
+G - 6
+H - 7
+I - 8
+J - 9
+K - 10
+L - 11
+
+
+
+
+
+

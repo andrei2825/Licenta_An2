@@ -1,0 +1,28 @@
+Nume: Porumb Andrei Cornel
+Grupa: 322CDa
+
+ex1.
+a)  Elliptic Curve Public Key
+
+b)  Common Name (CN)	GTS CA 1O1
+    Organization (O)	Google Trust Services
+    Organizational Unit (OU)	<Not Part Of Certificate>
+
+c)  Issued On	Monday, May 3, 2021 at 12:02:30 PM
+    Expires On	Monday, July 26, 2021 at 12:02:29 PM
+
+d)  04 F7 F7 DE 4D AF D6 B4 CA B5 49 1F DF 90 71 CD
+    F6 CB B7 FD 7A D9 DB 39 E4 93 68 2C 9D 55 FB 1F
+    30 4E 75 E0 EF 58 29 4C AC 66 3E 02 63 F5 E2 3F
+    BC 2C E1 55 3D AE D8 54 95 84 03 7C 3F 7B D5 2F
+    25
+
+Ex 2.
+In prima imagine atasata, am capturat traficul cu wireshark 
+si se poate vedea ca username-ul ales de mine este ABCDELGHIJKL
+iar in wireshark se poate observa clar acesta,
+
+In a doua imagine atasata am incercat sa ma conectez
+la moodle si dupa cum se poate observa toate datele sunt
+criptate.
+Versiunea de TLS folosita este TLSv1.2

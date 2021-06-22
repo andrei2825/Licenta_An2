@@ -1,0 +1,9 @@
+Starting audit...
+[WARN] /mnt/d/Desktop/Cursuri/PA/Tema 1/./Crypto.java:5: Wrong lexicographical order for 'java.io.FileWriter' import. Should be before 'java.io.PrintWriter'. [CustomImportOrder]
+[WARN] /mnt/d/Desktop/Cursuri/PA/Tema 1/./Crypto.java:6: Wrong lexicographical order for 'java.io.IOException' import. Should be before 'java.io.PrintWriter'. [CustomImportOrder]
+[WARN] /mnt/d/Desktop/Cursuri/PA/Tema 1/./Crypto.java:22:51: WhitespaceAround: '{' is not preceded with whitespace. [WhitespaceAround]
+[WARN] /mnt/d/Desktop/Cursuri/PA/Tema 1/./Crypto.java:25:15: WhitespaceAround: 'if' is not followed by whitespace. Empty blocks may only be represented as {} when not part of a multi-block statement (4.1.3) [WhitespaceAround]
+[WARN] /mnt/d/Desktop/Cursuri/PA/Tema 1/./Crypto.java:32:14: WhitespaceAround: 'while' is not followed by whitespace. Empty blocks may only be represented as {} when not part of a multi-block statement (4.1.3) [WhitespaceAround]
+[WARN] /mnt/d/Desktop/Cursuri/PA/Tema 1/./Crypto.java:34:19: WhitespaceAround: 'if' is not followed by whitespace. Empty blocks may only be represented as {} when not part of a multi-block statement (4.1.3) [WhitespaceAround]
+[WARN] /mnt/d/Desktop/Cursuri/PA/Tema 1/./Crypto.java:44: Comment has incorrect indentation level 0, expected is 2, indentation should be the same level as line 45. [CommentsIndentation]
+Audit done.

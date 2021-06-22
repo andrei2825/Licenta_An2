@@ -1,0 +1,20 @@
+Nume: Porumb Andrei-Cornel
+Grupa: 322CDa
+
+Laborator 1
+
+Task 1, implementare c pentru functia cat:
+
+Am initializat un buffer de 1024 octeti, o sursa si un element coppy.
+Pentru a deschide fisierul am folosit functia open cu argumentele:
+argv[1] care contine numele fisierului pe care se aplica customCat
+si argumentul pentru read only.
+Programul verifica daca fisierul a fost deschis fara erori, plaseaza
+cursorul la inceputul fisierului si citeste in buffer continutul fisierului.
+Daca nu exista erori de citire, programul ba orinta in stdout continutul
+bufferului si va inchide sursa.
+
+Task 2, implementare c pentru functia tac:
+Pentru aceasta functie am incercat o implementare asemanatoare doar
+ca nu mi-am dat seama cum sa citesc fisierul line by line in loc sa il citesc 
+in bucati de dimensiunea bufferului.

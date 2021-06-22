@@ -1,0 +1,11 @@
+0.7
+2020.2
+Nov 18 2020
+09:47:47
+D:/CN/Lab 5/Lab 5.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,,,,,,,
+D:/CN/Lab 5/Lab 5.srcs/sim_1/new/sim.v,1621924989,verilog,,,,sim,,,,,,,,
+D:/CN/Lab 5/Lab 5.srcs/sources_1/new/adunare.v,1621883183,verilog,,D:/CN/Lab 5/Lab 5.srcs/sources_1/new/ffd.v,,adunare,,,,,,,,
+D:/CN/Lab 5/Lab 5.srcs/sources_1/new/ffd.v,1621883721,verilog,,D:/CN/Lab 5/Lab 5.srcs/sources_1/new/inmultire.v,,ffd,,,,,,,,
+D:/CN/Lab 5/Lab 5.srcs/sources_1/new/inmultire.v,1621883183,verilog,,D:/CN/Lab 5/Lab 5.srcs/sources_1/new/scadere.v,,inmultire,,,,,,,,
+D:/CN/Lab 5/Lab 5.srcs/sources_1/new/scadere.v,1621883184,verilog,,D:/CN/Lab 5/Lab 5.srcs/sources_1/new/top.v,,scadere,,,,,,,,
+D:/CN/Lab 5/Lab 5.srcs/sources_1/new/top.v,1621919515,verilog,,D:/CN/Lab 5/Lab 5.srcs/sim_1/new/sim.v,,top,,,,,,,,

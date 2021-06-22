@@ -1,0 +1,63 @@
+Nume: Porumb Andrei-Cornel
+Gruma: 322CD
+
+Am realizat tema pe baza codului din laboratorul 10, pastrand fisierele:
+helpers, buffer si requests.
+In requests am pastrat codul ca in laboratorul 10 dar am adaugatin header
+un camp de authorization si o functie compute_delete_request pentru cererea
+de stergere a unei carti.
+
+Am ales sa tin aplicatia intr-un loop pentru a putea primi continuu 
+cereri de la utilizatori. Pentru mesajele cu format JSON am adaugat
+libraria parson descarcata de la: https://github.com/kgabis/parson/.
+
+Pentru comanda de register, am cerut datele (username si parola), le adaug
+intr-un obiect JSON si dau acel obiect ca parametru cererii de post
+trimisa la server.Pentru afisarea rezultatului acestui request, am
+verificat codul returnat de server, si in functie de acesta am afisat
+un mesaj afirmativ, un mesaj de eroare in cazul in care username-ul 
+este utilizat sau un mesaj de eraore in cazul in care serverul
+nu mai primeste request-uri.
+
+Comanda login este asemanatoare comenzii register, schimbat fiind doar url-ul.
+Dupa ce logarea este efectuata cu succes, extrag cookie-ul primit si il retin.
+
+Pentru comanda enter_library am trimis cookie-ul salvat anterior pe post
+de cheie de autentificare si in cazul in care comanda este efectuata 
+corespunzator si cookie-ul este corect, serverul returneaza un token pe care
+l-am extras si salvat.
+Am folosit acest token pentru toate comenzile urmatoare cu exceptia
+logout si exit.
+
+Pentru comanda get_books, am adaugat tokenul in header si in cazul 
+in care primesc un raspuns bun de la server, afisez lista de carti primita,
+si id-urile acestora.
+
+In cazul requestului add_book am afisat cate un prompt pentru title, author,
+genre, publisher si page_count ultima testand-o pentru a vedea daca este
+un numar valid de pagini sau daca formatul este corect.
+La fel ca la cererile de register si login, am creat un obiect JSON si 
+pe care l-am dat ca parametru functiei de post. In cazul unui raspuns 
+bun de la server (200~299) am afisat un mesaj afirmativ si titlul cartii 
+introduse.
+
+Pentru cererea get_book am cerut utilizatorului un id pe care l-am concatenat
+la url.
+Comparativ cu cazurile precedente, aici au fost 3 posibile erori:
+    403 cand utilizatorul nu poate demonstra ca este conectat,
+    404 cand utilizatorul ofera un id inexistent in baza de date,
+    429 cand serverul nu mai permite cereri noi pentru o scurta
+        perioada de timp.
+
+Cererea delete_book este aproape identica cu cea de get_book, aceasta 
+avad ca singura diferenta, functia apelata si anume compute_delete_request 
+in loc de compute_get_request.
+
+Pentru cererea de logout am apelat functia compute_get_request, dupa care
+am setatm la NULL key-ul si tokenul pentru a nu mai putea fi utilizate
+dupa delogare. 
+In acest caz puteau fi 2 cazuri de erori, una cand nu este nimeni
+logat, si alta cand serverul nu mai accepta cereri.
+
+Cererea de exit inchide loop-ul astfel terminand programul.
+

@@ -1,0 +1,147 @@
+Porumb Andrei Cornel
+322CDa
+ex1: 
+1.
+
+->> 5 puncte de articulatie 
+
+
+0. Low = d(0) = 0
+timp = 1;
+c(0) = gri
+1. Low = d(1) = 1
+timp = 2
+c(1) = gri
+2. Low = d(2) = 2
+timp = 3
+c(2) = gri
+update: low[2] = 1
+3. Low = d(3) = 3
+timp = 4
+c(3) = gri
+4. Low = d(4) = 4
+timp = 5
+c(4) = gri
+se reactualizeaza
+low[4] = 2 (min(low(2) , low(4))
+low(4) = 2 < d(3) => nu e punct de artic.
+5. low = d(5) = 5
+timp = 6
+c(5) = gri
+6. low = d(6) = 6
+timp = 7
+c(6) = gri
+reactualizare => low[5] = 5 < d(6)
+art[5] = 1
+reactualizare
+low[5] = 5 > d(3) => ; =>
+art[3] = 1
+reactualizare
+low[3] = 2 >= d(2)=>
+art[2] = 1 
+7. low = d = 7
+timp = 8
+c(7) = gri
+low ( 7 ) = min(low(7) , low(8)) = 1
+8. low = d = 8
+timp = 9
+c(8) = gri
+se reactualizeaza low[8] = 1 (min(low(7), low(1)) = 1
+low[2] = 1  >=  d(1) 
+art[1] = 1
+reactualizare 
+low[1] = 1
+9. low = d(9) = 9
+timp = 10
+c(9) = gri
+subarb[0] = 2 > 1
+=> art[0] = 1
+puncte de articulatie: 0, 1, 2, 3, 5
+
+
+Ex2:
+
+noduri: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+
+0:1
+0:9
+1:2
+1:8
+2:7
+2:3
+2:4
+3:4
+3:5
+5:6
+7:8
+timp = 0;
+c(0) = c(1) = c(2) = c(3) = c(4) = c(5) = c(6) = c(7) = c(8) = c(9) = alb
+d(0) = d(1) = d(2) = d(3) = d(4) = d(5) = d(6) = d(7) = d(8) = d(9) = 0
+p(0) = p(1) = p(2) = p(3) = p(4) = p(5) = p(6) = p(7) = p(8) = p(9) = null
+low(0) = low(1) = low(2) = low(3) = low(4) = low(5) = low(6) = low(7) = low(8) = low(9) = 0
+punte(0) = punte(1) = punte(2) = punte(3) = punte(4) = punte(5) = punte(6) = punte(7) = punte(8) = punte(9) = 0
+Start = 0
+u = 0
+d(0) = low(0) = timp++ = 0;
+timp = 1;
+c(0) = gri;
+>p(1) = 0;
+ u = 1;
+ d(1) = low(1) = timp++ = 1;
+ timp = 2;
+ c(1) = gri;
+ >p(2) = 1;
+  u = 2
+  d(2) = low(2) = timp++ = 2;
+  timp = 3;
+  c(2) = gri;
+  >p(3) = 2
+   u = 3
+   d(3) = low(3) = timp++ = 3;
+   timp = 4;
+   c(3) = gri;
+   >p(4) = 3
+    u = 4;
+    d(4) = low(4) = timp++ = 4;
+    timp = 5;
+    c(4) = gri;
+    p(4) != 2 => low(4) = min{low(4), d(2)} = min{4, 2} = 2
+   low(3) = min{low(3), low(4)} = min{3,2} = 2
+   >p(5) = 3
+    u = 5
+    d(5) = low(5) = timp++ = 5;
+    timp = 6;
+    c(5) = gri;
+    >p(6) = 5
+     u = 6
+     d(6) = low(6) = timp++ = 6
+     timp = 7
+     c(6) = gri
+    low(5) = min{low(5), low(6)} = min{5, 6) = 5
+    low(6) > d(5) => punte(6) = 1
+   low(3) = min{low(3), low(5)} = min{2, 5} = 2
+   low(5) > d(3) => punte(5) = 1
+  low(2) = min{low(2), low(3)} = min(2, 2) = 2;
+  >p(7) = 2
+   u = 7
+   d(7) = low(7) = timp++ = 7;
+   timp = 8;
+   c(7) = gri;
+   >p(8) = 7
+    u = 8
+    d(8) = low(8) = timp++ = 8;
+    timp = 9;
+    c(8) = gri;
+    p(8) != 1 => low(8) = min{low(8), d(1)} = min{8, 1} = 1;
+   low(7) = min{low(7), low(8)} = min{7, 1} = 1
+  low(2) = min{low(2), low(7)} = min{2, 1} = 1;
+ low(1) = min{low(1), low(2)} = min{1, 1} = 1
+low(0) = min{low(0), low(1)} = min(0, 1) = 0
+low(1) > d(0) => punte(1) = 1
+>p(9) = 0
+ u = 9
+ d(9) = low(9) = timp++ = 9;
+ timp = 10
+ c(9) = gri
+low(0) = min{low(0), low(9)} = min{0, 9} = 0
+low(9) > d(0) => punte(9) = 1 

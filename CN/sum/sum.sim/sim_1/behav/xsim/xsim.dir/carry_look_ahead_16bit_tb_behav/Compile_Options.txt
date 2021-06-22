@@ -1,0 +1,1 @@
+-wto "fa6fe90dad284c129ab1737f1c3fdb89" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "carry_look_ahead_16bit_tb_behav" "xil_defaultlib.carry_look_ahead_16bit_tb" "xil_defaultlib.glbl" -log "elaborate.log" 

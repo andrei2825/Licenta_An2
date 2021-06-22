@@ -1,0 +1,394 @@
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig A single-v4.protocoale.club
+
+; <<>> DiG 9.16.1-Ubuntu <<>> A single-v4.protocoale.club
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 49794
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;single-v4.protocoale.club.	IN	A
+
+;; ANSWER SECTION:
+single-v4.protocoale.club. 124	IN	A	127.0.0.1
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Jo apr 29 18:41:40 EEST 2021
+;; MSG SIZE  rcvd: 70
+
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig A single-v6.protocoale.club
+
+; <<>> DiG 9.16.1-Ubuntu <<>> A single-v6.protocoale.club
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 22469
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;single-v6.protocoale.club.	IN	A
+
+;; Query time: 96 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Jo apr 29 18:41:52 EEST 2021
+;; MSG SIZE  rcvd: 54
+
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig A single.protocoale.club
+
+; <<>> DiG 9.16.1-Ubuntu <<>> A single.protocoale.club
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 21739
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;single.protocoale.club.		IN	A
+
+;; ANSWER SECTION:
+single.protocoale.club.	140	IN	A	127.0.0.1
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Jo apr 29 18:42:20 EEST 2021
+;; MSG SIZE  rcvd: 67
+
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig A dorinel.protocoale.club
+
+; <<>> DiG 9.16.1-Ubuntu <<>> A dorinel.protocoale.club
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 8817
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;dorinel.protocoale.club.	IN	A
+
+;; ANSWER SECTION:
+dorinel.protocoale.club. 300	IN	A	127.42.0.0
+
+;; Query time: 284 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Jo apr 29 18:42:33 EEST 2021
+;; MSG SIZE  rcvd: 68
+
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig A multi-v4.protocoale.club
+
+; <<>> DiG 9.16.1-Ubuntu <<>> A multi-v4.protocoale.club
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 63753
+;; flags: qr rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;multi-v4.protocoale.club.	IN	A
+
+;; ANSWER SECTION:
+multi-v4.protocoale.club. 300	IN	A	127.3.3.3
+multi-v4.protocoale.club. 300	IN	A	127.2.2.2
+multi-v4.protocoale.club. 300	IN	A	127.4.4.4
+multi-v4.protocoale.club. 300	IN	A	127.1.1.1
+
+;; Query time: 64 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Jo apr 29 18:42:55 EEST 2021
+;; MSG SIZE  rcvd: 117
+
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig A multi.protocoale.club
+
+; <<>> DiG 9.16.1-Ubuntu <<>> A multi.protocoale.club
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 54207
+;; flags: qr rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;multi.protocoale.club.		IN	A
+
+;; ANSWER SECTION:
+multi.protocoale.club.	300	IN	A	127.4.4.4
+multi.protocoale.club.	300	IN	A	127.2.2.2
+multi.protocoale.club.	300	IN	A	127.3.3.3
+multi.protocoale.club.	300	IN	A	127.1.1.1
+
+;; Query time: 92 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Jo apr 29 18:43:09 EEST 2021
+;; MSG SIZE  rcvd: 114
+
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig A protocoale.protocoale.club
+
+; <<>> DiG 9.16.1-Ubuntu <<>> A protocoale.protocoale.club
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 14050
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;protocoale.protocoale.club.	IN	A
+
+;; ANSWER SECTION:
+protocoale.protocoale.club. 300	IN	A	127.42.42.42
+
+;; Query time: 64 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Jo apr 29 18:43:21 EEST 2021
+;; MSG SIZE  rcvd: 71
+
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig A protocoale.club
+
+; <<>> DiG 9.16.1-Ubuntu <<>> A protocoale.club
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 43912
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;protocoale.club.		IN	A
+
+;; Query time: 56 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Jo apr 29 18:43:54 EEST 2021
+;; MSG SIZE  rcvd: 44
+
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig AAAA single-v6.protocoale.club
+
+; <<>> DiG 9.16.1-Ubuntu <<>> AAAA single-v6.protocoale.club
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 11811
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;single-v6.protocoale.club.	IN	AAAA
+
+;; ANSWER SECTION:
+single-v6.protocoale.club. 300	IN	AAAA	::1
+
+;; Query time: 64 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Jo apr 29 18:44:06 EEST 2021
+;; MSG SIZE  rcvd: 82
+
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig AAAA single.protocoale.club
+
+; <<>> DiG 9.16.1-Ubuntu <<>> AAAA single.protocoale.club
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 33500
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;single.protocoale.club.		IN	AAAA
+
+;; ANSWER SECTION:
+single.protocoale.club.	300	IN	AAAA	::1
+
+;; Query time: 108 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Jo apr 29 18:44:14 EEST 2021
+;; MSG SIZE  rcvd: 79
+
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig AAAA single.protocoale.club
+
+; <<>> DiG 9.16.1-Ubuntu <<>> AAAA single.protocoale.club
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 6600
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;single.protocoale.club.		IN	AAAA
+
+;; ANSWER SECTION:
+single.protocoale.club.	290	IN	AAAA	::1
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Jo apr 29 18:44:24 EEST 2021
+;; MSG SIZE  rcvd: 79
+
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig AAAA multi-v6.protocoale.club
+
+; <<>> DiG 9.16.1-Ubuntu <<>> AAAA multi-v6.protocoale.club
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 21813
+;; flags: qr rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;multi-v6.protocoale.club.	IN	AAAA
+
+;; ANSWER SECTION:
+multi-v6.protocoale.club. 300	IN	AAAA	::4
+multi-v6.protocoale.club. 300	IN	AAAA	::2
+multi-v6.protocoale.club. 300	IN	AAAA	::3
+multi-v6.protocoale.club. 300	IN	AAAA	::1
+
+;; Query time: 52 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Jo apr 29 18:44:35 EEST 2021
+;; MSG SIZE  rcvd: 165
+
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig AAAA multi.protocoale.club
+
+; <<>> DiG 9.16.1-Ubuntu <<>> AAAA multi.protocoale.club
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 11550
+;; flags: qr rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;multi.protocoale.club.		IN	AAAA
+
+;; ANSWER SECTION:
+multi.protocoale.club.	300	IN	AAAA	::4
+multi.protocoale.club.	300	IN	AAAA	::1
+multi.protocoale.club.	300	IN	AAAA	::3
+multi.protocoale.club.	300	IN	AAAA	::2
+
+;; Query time: 52 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Jo apr 29 18:44:45 EEST 2021
+;; MSG SIZE  rcvd: 162
+
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig MX protocoale.club
+
+; <<>> DiG 9.16.1-Ubuntu <<>> MX protocoale.club
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 37231
+;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;protocoale.club.		IN	MX
+
+;; ANSWER SECTION:
+protocoale.club.	300	IN	MX	20 alt2.gmail-smtp-in.l.google.com.
+protocoale.club.	300	IN	MX	30 alt3.gmail-smtp-in.l.google.com.
+protocoale.club.	300	IN	MX	10 alt1.gmail-smtp-in.l.google.com.
+
+;; Query time: 56 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Jo apr 29 18:45:27 EEST 2021
+;; MSG SIZE  rcvd: 133
+
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig multi-v4.protocoale.club +short
+127.3.3.3
+127.2.2.2
+127.1.1.1
+127.4.4.4
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig multi-v4.protocoale.club ns +short
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig +noall +answer multi-v4.protocoale.club
+multi-v4.protocoale.club. 106	IN	A	127.4.4.4
+multi-v4.protocoale.club. 106	IN	A	127.1.1.1
+multi-v4.protocoale.club. 106	IN	A	127.2.2.2
+multi-v4.protocoale.club. 106	IN	A	127.3.3.3
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig +noall +authority multi-v4.protocoale.club
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig +noall +answer +authority multi-v4.protocoale.club
+multi-v4.protocoale.club. 72	IN	A	127.4.4.4
+multi-v4.protocoale.club. 72	IN	A	127.1.1.1
+multi-v4.protocoale.club. 72	IN	A	127.2.2.2
+multi-v4.protocoale.club. 72	IN	A	127.3.3.3
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig +noauthority multi-v4.protocoale.club
+
+; <<>> DiG 9.16.1-Ubuntu <<>> +noauthority multi-v4.protocoale.club
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 17502
+;; flags: qr rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;multi-v4.protocoale.club.	IN	A
+
+;; ANSWER SECTION:
+multi-v4.protocoale.club. 300	IN	A	127.4.4.4
+multi-v4.protocoale.club. 300	IN	A	127.2.2.2
+multi-v4.protocoale.club. 300	IN	A	127.1.1.1
+multi-v4.protocoale.club. 300	IN	A	127.3.3.3
+
+;; Query time: 52 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Jo apr 29 19:08:58 EEST 2021
+;; MSG SIZE  rcvd: 117
+
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig +nocomments +noadditional +nostats +noanswer multi-v4.protocoale.club
+
+; <<>> DiG 9.16.1-Ubuntu <<>> +nocomments +noadditional +nostats +noanswer multi-v4.protocoale.club
+;; global options: +cmd
+;multi-v4.protocoale.club.	IN	A
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ cat queries.txt 
+8.8.8.8
+single-v4.protocoale.club	
+single-v6.protocoale.club	
+single.protocoale.club	
+dorinel.protocoale.club	
+multi-v4.protocoale.club	
+multi-v6.protocoale.club	
+multi.protocoale.club	
+pc.protocoale.club	
+pcom.protocoale.club	
+protocoale.protocoale.club	
+protocoale.club	andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ 
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig -f queries.txt +noall +answer
+single-v4.protocoale.club. 300	IN	A	127.0.0.1
+single.protocoale.club.	300	IN	A	127.0.0.1
+dorinel.protocoale.club. 300	IN	A	127.42.0.0
+multi-v4.protocoale.club. 300	IN	A	127.2.2.2
+multi-v4.protocoale.club. 300	IN	A	127.3.3.3
+multi-v4.protocoale.club. 300	IN	A	127.4.4.4
+multi-v4.protocoale.club. 300	IN	A	127.1.1.1
+multi.protocoale.club.	300	IN	A	127.3.3.3
+multi.protocoale.club.	300	IN	A	127.1.1.1
+multi.protocoale.club.	300	IN	A	127.4.4.4
+multi.protocoale.club.	300	IN	A	127.2.2.2
+pc.protocoale.club.	300	IN	CNAME	pcom.protocoale.club.
+pcom.protocoale.club.	299	IN	CNAME	protocoale.protocoale.club.
+protocoale.protocoale.club. 299	IN	A	127.42.42.42
+pcom.protocoale.club.	299	IN	CNAME	protocoale.protocoale.club.
+protocoale.protocoale.club. 299	IN	A	127.42.42.42
+protocoale.protocoale.club. 299	IN	A	127.42.42.42
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig test.dorinel.protocoale.club +noall +answer
+test.dorinel.protocoale.club. 300 IN	A	127.0.42.0
+test.dorinel.protocoale.club. 300 IN	A	127.0.0.42
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig protocoale.club +noall +answer
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig -x 1.1.1.1 +noall +answer
+1.1.1.1.in-addr.arpa.	686	IN	PTR	one.one.one.one.
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ dig -x 8.8.8.8 +noall +answer
+8.8.8.8.in-addr.arpa.	4475	IN	PTR	dns.google.
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ wireshark
+^C
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ sudo wireshark
+[sudo] password for andrei: 
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+andrei@andrei-VirtualBox:~/Desktop/PC/Lab 9$ 
+

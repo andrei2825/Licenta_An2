@@ -1,0 +1,8 @@
+Nume: Porumb Andrei Cornel
+Grupa: 322CDa
+Lab 2
+
+Atat pentru send.c cat si pentru recv.c am urmat instructiunile de la laborator.
+Am creat un fisier cu multiplu de 7 caractere si am trimis in pachete de 7
+bytes caracterele. 
+Pentru a distinge mesajele am adaugat un counter.
